@@ -35,8 +35,9 @@ import json
 from itertools import chain
 
 thisfile = Path(__file__)
-posters_file = thisfile.parent.parent / 'posters.json'
-overrides_file = thisfile.parent.parent / 'posters-overrides.json'
+srcrepo_path = thisfile.parent.parent / "ohbm2020-posters"
+posters_file = srcrepo_path / 'posters.json'
+overrides_file = srcrepo_path / 'posters-overrides.json'
 assert overrides_file.exists()  # must be there now
 posters = json.loads(posters_file.read_text())
 overrides = json.loads(overrides_file.read_text())
